@@ -7,7 +7,6 @@ const downloadsPath = "../../../../Downloads/";
 
 
 // reading all the files contained inside download folder
-
 //readdirsync returns an array of all the folders inside the directory
 
 let contentOfDownloads = fs.readdirSync(downloadsPath);
@@ -47,20 +46,20 @@ function sortFolder(file) {
 
 function checkFolder(ext) {
 
-  if(ext == "docx"|| ext == "pdf" || ext == "txt" || ext == "zip"){
+  if(ext == "docx"|| ext == "pdf" || ext == "txt" || ext == "zip" || ext == "pptx" || ext == "doc"){
     // check Documents folder
     //"./Downloads/Documents"
     let folderPath = downloadsPath+"/Documents";
     return fs.existsSync(folderPath);
   }
 
-  else if(ext == "jpeg" || ext == "jpg" || ext == "png"){
+  else if(ext == "jpeg" || ext == "jpg" || ext == "png"|| ext =="gif"){
     // check Images
     let folderPath = downloadsPath+"/Images"
     return fs.existsSync(folderPath);
 }
 else if(ext == "mkv" || ext == "mp4"){
-  
+
     // check Videos
     let folderPath = downloadsPath+"/Videos"
     return fs.existsSync(folderPath);
@@ -69,13 +68,13 @@ else if(ext == "mkv" || ext == "mp4"){
 
 function moveFile(file, ext){
 
-  if(ext == "docx"|| ext == "pdf" || ext == "txt" || ext == "zip"){
+  if(ext == "docx"|| ext == "pdf" || ext == "txt" || ext == "zip"|| ext == "doc"|| ext == "pptx"){
   let sourceFile = `${downloadsPath}/${file}`;
   let destinationFile = `${downloadsPath}/Documents/${file}`;
   fs.copyFileSync(sourceFile, destinationFile);
   fs.unlinkSync(sourceFile);
   }
-  else if(ext == "jpeg" || ext == "jpg" || ext == "png") {
+  else if(ext == "jpeg" || ext == "jpg" || ext == "png"|| ext =="gif") {
      let sourceFile = `${downloadsPath}/${file}`;
      let destinationFile = `${downloadsPath}/Images/${file}`;
         fs.copyFileSync( sourceFile  , destinationFile );
@@ -93,14 +92,14 @@ function moveFile(file, ext){
 }
 
 function createFolder(ext){
-  if(ext == "docx"|| ext == "pdf" || ext == "txt" || ext == "zip"){
+  if(ext == "docx"|| ext == "pdf" || ext == "txt" || ext == "zip"|| ext == "doc"|| ext == "pptx"){
 
     let folderPath = downloadsPath+"/Documents";
     console.log(folderPath);
     fs.mkdirSync(folderPath);
   }
 
-  else if(ext == "jpeg" || ext == "jpg" || ext == "png"){
+  else if(ext == "jpeg" || ext == "jpg" || ext == "png"|| ext =="gif"){
 
     let folderPath = downloadsPath+"/Images";
     console.log(folderPath);
