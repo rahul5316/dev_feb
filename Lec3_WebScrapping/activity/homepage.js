@@ -1,6 +1,15 @@
 const request  = require("request");
 const fs = require("fs");
 const cheerio = require("cheerio");
+const getAllMatches = require("./allMatches");
+//module.export is accessble anywhere so the command below calls the module.exports from the allMatches class.
+//The syntax state that the module.expot gets the getAllMatches key of module.export
+
+// if we had writtern let obj = require("./allMatches") it would have brought the entire module.object with all the keys
+// const {getAllMatches} = require("./allMatches");
+
+//module.exports is an object by default but we can change it if we want it to
+
 
 
 
@@ -36,7 +45,7 @@ function processHtml(html) {
   let completeLink = "https://www.espncricinfo.com"+link;
   //console.log(completeLink);
 
-  getAllMatches(completeLink);
+ getAllMatches(completeLink);
 
   
 }
