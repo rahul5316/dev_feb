@@ -14,7 +14,7 @@ function cb(error, response, data) {
 
 function processHtml(html) {
 
-  let ch = cheerio.load(html);
+ let ch = cheerio.load(html);
 
   let bothInningsDiv = ch(".card.content-block.match-scorecard-table .Collapsible");
   for(let i = 0; i<bothInningsDiv.length;i++) {
@@ -25,6 +25,7 @@ function processHtml(html) {
     teamName = teamName.split("INNINGS")[0].trim();
 
     console.log(teamName);
+
 
     let allTrs = ch(bothInningsDiv[i]).find(".table.batsman tbody tr");
 
