@@ -40,7 +40,7 @@ function processHtml(html) {
 
   // we needed the a tag of that list item
   let aTag = ch(".widget-items.cta-link a");
-  //atag.attr() is basically passing whatever attribute we need of thatatag 
+  //atag.attr() is basically passing whatever attribute we need of that atag 
   let link = aTag.attr("href");
   let completeLink = "https://www.espncricinfo.com"+link;
   //console.log(completeLink);
