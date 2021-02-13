@@ -30,6 +30,9 @@ pendingPromise.then(function(data) {
 });
 
 
+
+// catch ki call me jo function hai it is knows as failure callback
+// pp.catch() => attaches a fcb to pending promise !!!
 pendingPromise.catch(function(error){
 
   console.log("Inside catch");
