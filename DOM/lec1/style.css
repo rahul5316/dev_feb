@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+  margin:0px;
+  padding: 0px;
+}
+
+
+.input-container{
+  height: 20px;
+  background: black;
+}
+}
+
+.todo-input{
+
+}
+
+.add-todo{
+
+}
+
+.todos-container{
+  height: 90vh;
+  background: blue;
+}
+
+.todos-list{
+
+
+}
+
+.todo-item{
+
+}
+
+.todo{
+
+}
+
+.delete-task{
+
+}
