@@ -3,25 +3,44 @@
   margin:0px;
   padding: 0px;
 }
-
+body{
+  background:#a29bfe;
+}
 
 .input-container{
-  height: 20px;
-  background: black;
+  height: 20vh;
+    background: black;
+    display: block;
+    margin: auto;
 }
-}
+
 
 .todo-input{
-
+  display: block; /*doesn't let any pther stuff to coe iniide it's width*/
+  margin: auto; /*shifts the stuff to the center horizontally. margin auto cannot work without display block. it needs display:block*/
+  height: 70%;
+  width: 50%;
+  font-size: 2rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 50vh;
+  
 }
 
 .add-todo{
-
+  display: block;
+    margin: auto;
+    margin-top: 10px;
+    height: 50%;
+    width: 15%;
+    border-radius: 50px;
+    outline: none;
+    backgound: red;
 }
 
 .todos-container{
   height: 90vh;
-  background: blue;
 }
 
 .todos-list{
@@ -30,13 +49,24 @@
 }
 
 .todo-item{
-
+  border: 1px solid;
+  /* margin-bottom: 10px; */
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  height: 5rem;
+  width: 80%;
+  background: red;
+  border-radius: 50px;
+  margin-top: 8vh;
 }
 
 .todo{
-
+  color: white;
+  text-align: center;
 }
 
 .delete-task{
-
+display: block;
+margin: auto;
 }

@@ -55,6 +55,10 @@ function addTodo() {
     todoInput.value = "";
   }
 
+  else{
+    alert("Nothing Typed");
+  }
+
   
 }
 
