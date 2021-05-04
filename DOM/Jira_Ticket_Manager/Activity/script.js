@@ -16,7 +16,8 @@ for(let i =0; i<allFilters.length;i++) {
 }
 
 function chooseFilter(e){
-  let filter = e.target.classList[1];//gets whatever color was clicked
+  //console.log(e);
+  let filter = e.target.classList[1];//gets whatever color was clicked. goes to target where target is and then classList which has the events.
   let filterCode = filterCodes[filter];//finds the code of that colour from above
   ticketContainer.style.background = filterCode;//sets the background to this certain color
 }
